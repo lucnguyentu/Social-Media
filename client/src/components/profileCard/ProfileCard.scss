@@ -1,0 +1,85 @@
+@import '../../App.scss';
+
+.ProfileCard {
+    @include flexColumn;
+    border-radius: 1.5rem;
+    position: relative;
+    gap: 1rem;
+    overflow-x: clip;
+    background-color: $cardColor;
+
+    .ProfileImages {
+        @include flexColumn;
+        align-items: center;
+        position: relative;
+
+        img:nth-of-type(1) {
+            width: 100%;
+        }
+
+        img:nth-of-type(2) {
+            width: 6rem;
+            border-radius: 50%;
+            position: absolute;
+            bottom: -3rem;
+            box-shadow: $profileShadow;
+        }
+    }
+
+    .ProfileName {
+        @include flexColumn;
+        align-items: center;
+        margin-top: 3rem;
+        gap: 10px;
+
+        span:nth-of-type(1) {
+            font-weight: bold;
+        }
+    }
+
+    .followStatus {
+        hr {
+            width: 85%;
+            border: 1px solid $hrColor;
+        }
+
+        .wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+
+            .follow {
+                @include flexColumn;
+                align-items: center;
+                justify-content: center;
+                gap: 0.4rem;
+
+                span:nth-of-type(1) {
+                    font-weight: bold;
+                }
+
+                span:nth-of-type(2) {
+                    font-size: 13px;
+                    color: $gray;
+                }
+            }
+
+            .vl {
+                height: 3.5rem;
+                border-left: 2px solid $hrColor;
+            }
+        }
+    }
+
+    .myProfile {
+        align-self: center;
+        color: $orange;
+        font-weight: bold;
+        margin-bottom: 1rem;
+        cursor: pointer;
+
+        a {
+            color: $orange;
+        }
+    }
+}

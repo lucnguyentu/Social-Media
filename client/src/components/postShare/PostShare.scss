@@ -1,0 +1,80 @@
+@import '../../App.scss';
+
+.PostShare {
+    display: flex;
+    gap: 1rem;
+    background-color: $cardColor;
+    padding: 1rem;
+    border-radius: 1rem;
+
+    img {
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+    }
+
+    .postStatus {
+        @include flexColumn;
+        width: 90%;
+        gap: 1rem;
+
+        input {
+            background-color: $inputColor;
+            border-radius: 10px;
+            padding: 10px;
+            font-size: 17px;
+            border: none;
+            outline: none;
+        }
+    }
+
+    .postOptions {
+        display: flex;
+        justify-content: space-around;
+
+        .option {
+            padding: 5px 10px 0 10px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        .option:nth-of-type(1) {
+            color: $photo;
+        }
+        .option:nth-of-type(2) {
+            color: $video;
+        }
+        .option:nth-of-type(3) {
+            color: $location;
+        }
+        .option:nth-of-type(4) {
+            color: $shedule;
+        }
+    }
+}
+
+.PreviewImage {
+    position: relative;
+
+    svg {
+        position: absolute;
+        right: 1rem;
+        top: 0.5rem;
+        cursor: pointer;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        max-height: 20rem;
+        object-fit: cover;
+        border-radius: 0.5rem;
+    }
+}

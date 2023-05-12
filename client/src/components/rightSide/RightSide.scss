@@ -1,0 +1,41 @@
+@import '../../App.scss';
+
+.RightSide {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.navIcons {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navIcons > a > img,
+.navIcons > img {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.r-button {
+    border-radius: 0.5rem;
+    color: #fff;
+    background: $buttonBg;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    padding: 0 20px;
+    transition: all 100ms ease-out;
+    font-weight: 600;
+    border: 1px solid transparent;
+    height: 3rem;
+    width: 80%;
+    align-self: center;
+
+    &:hover {
+        color: $orange;
+        background: transparent;
+        border: 1px solid $orange;
+    }
+}
